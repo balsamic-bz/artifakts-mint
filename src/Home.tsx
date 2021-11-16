@@ -21,7 +21,7 @@ import {
 
 const ConnectButton = styled(WalletDialogButton)``;
 
-const CounterText = styled.span``; // add your styles here
+const CounterText = styled.span`font-size: 16px; color: red;`; // add your styles here
 
 const MintContainer = styled.div``; // add your styles here
 
@@ -53,6 +53,7 @@ const Home = (props: HomeProps) => {
   });
 
   const [startDate, setStartDate] = useState(new Date(props.startDate));
+  const jsStartDate = startDate +"000";
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
@@ -167,17 +168,30 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
+
+    <video
+        playsInline
+        autoPlay
+        loop
+        muted
+        style={{ width: "400px", height: "400px", display: "block", margin: "30px" }}
+        poster="placeholder.svg"
+      >
+        <source
+          src="https://d313ausoknygox.cloudfront.net/montage2.mp4"
+          type="video/mp4"
+        />
+      </video>
+
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
       {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
 
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
+      {wallet && <p>Mint Cost: #.## SOL </p>}
 
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
-
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
+      {wallet && <p>ARTIFAKTS Remaining: {itemsRemaining} / {itemsAvailable}</p>}
 
       <MintContainer>
         {!wallet ? (
@@ -198,7 +212,7 @@ const Home = (props: HomeProps) => {
               )
             ) : (
               <Countdown
-                date={startDate}
+                date={1637141400000}  // JS timestampes are in milliseconds, must have 3 zeros added
                 onMount={({ completed }) => completed && setIsActive(true)}
                 onComplete={() => setIsActive(true)}
                 renderer={renderCounter}

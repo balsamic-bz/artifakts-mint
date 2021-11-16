@@ -40,6 +40,7 @@ const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!;
 const connection = new anchor.web3.Connection(rpcHost);
 
 const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
+console.log("startDataSeed = " + startDateSeed);
 
 const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
