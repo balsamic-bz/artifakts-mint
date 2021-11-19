@@ -19,13 +19,13 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)``;
+const ConnectButton = styled(WalletDialogButton)`color: black; border: 3px solid white; border-radius: 3px`;
 
 const CounterText = styled.span`font-size: 16px; color: red;`; // add your styles here
 
 const MintContainer = styled.div``; // add your styles here
 
-const MintButton = styled(Button)``; // add your styles here
+const MintButton = styled(Button)`color: white; border: 3px solid black; border-radius: 3px`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -53,7 +53,7 @@ const Home = (props: HomeProps) => {
   });
 
   const [startDate, setStartDate] = useState(new Date(props.startDate));
-  const jsStartDate = startDate +"000";
+  
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
@@ -178,10 +178,14 @@ const Home = (props: HomeProps) => {
         poster="placeholder.svg"
       >
         <source
-          src="https://d313ausoknygox.cloudfront.net/montage2.mp4"
+          src="https://d313ausoknygox.cloudfront.net/preview.mp4"
           type="video/mp4"
         />
       </video>
+
+      <p> Coming Soon! </p>
+
+      { /*
 
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
@@ -234,6 +238,10 @@ const Home = (props: HomeProps) => {
           {alertState.message}
         </Alert>
       </Snackbar>
+        
+        */}
+
+
     </main>
   );
 };
