@@ -19,7 +19,7 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)`color: black; border: 3px solid white; border-radius: 3px`;
+const ConnectButton = styled(WalletDialogButton)`color: black; border: 3px solid white; border-radius: 3px;`;
 
 const CounterText = styled.span`font-size: 16px; color: red;`; // add your styles here
 
@@ -183,9 +183,9 @@ const Home = (props: HomeProps) => {
         />
       </video>
 
-      <p> Coming Soon! </p>
+      { /*<p> Coming Soon! </p> */}
 
-      { /*
+      
 
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
@@ -216,7 +216,7 @@ const Home = (props: HomeProps) => {
               )
             ) : (
               <Countdown
-                date={1637141400000}  // JS timestampes are in milliseconds, must have 3 zeros added
+                date={1637450700000}  // JS timestampes are in milliseconds, must have 3 zeros added
                 onMount={({ completed }) => completed && setIsActive(true)}
                 onComplete={() => setIsActive(true)}
                 renderer={renderCounter}
@@ -239,7 +239,7 @@ const Home = (props: HomeProps) => {
         </Alert>
       </Snackbar>
         
-        */}
+        
 
 
     </main>
