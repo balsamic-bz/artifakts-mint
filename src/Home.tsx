@@ -195,7 +195,7 @@ const Home = (props: HomeProps) => {
 
       {wallet && <p>Mint Cost: #.## SOL </p>}
 
-      {wallet && <p>ARTIFAKTS Remaining: {itemsRemaining} / {itemsAvailable}</p>}
+      {wallet && <p>ARTIFAKTS Minted: {itemsRedeemed} / {itemsAvailable}</p>}
 
       <MintContainer>
         {!wallet ? (
