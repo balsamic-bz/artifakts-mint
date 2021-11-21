@@ -216,7 +216,7 @@ const Home = (props: HomeProps) => {
               )
             ) : (
               <Countdown
-                date={2637450700000}  // JS timestampes are in milliseconds, must have 3 zeros added
+                date={1637460000000}  // JS timestampes are in milliseconds, must have 3 zeros added
                 onMount={({ completed }) => completed && setIsActive(true)}
                 onComplete={() => setIsActive(true)}
                 renderer={renderCounter}
