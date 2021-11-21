@@ -19,7 +19,7 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)`color: black; border: 3px solid white; border-radius: 3px;`;
+const ConnectButton = styled(WalletDialogButton)`color: white; font-weight: bold; border: 3px solid black; border-radius: 3px`;
 
 const CounterText = styled.span`font-size: 16px; color: red;`; // add your styles here
 

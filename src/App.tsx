@@ -52,12 +52,14 @@ const theme = createTheme({
         MuiButtonBase: {
             root: {
                 justifyContent: 'flex-start',
+                
             },
         },
         MuiButton: {
             root: {
                 textTransform: undefined,
                 padding: '12px 16px',
+                
             },
             startIcon: {
                 marginRight: 8,
