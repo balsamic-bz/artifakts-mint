@@ -183,9 +183,9 @@ const Home = (props: HomeProps) => {
         />
       </video>
 
-      { <p> Coming Soon! </p> }
+      {/* <p> Coming Soon! </p> */}
 
-      { /*
+      
 
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
@@ -193,7 +193,7 @@ const Home = (props: HomeProps) => {
 
       {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
 
-      {wallet && <p>Mint Cost: #.## SOL </p>}
+      {wallet && <p>Mint Cost: 0.50 SOL </p>}
 
       {wallet && <p>ARTIFAKTS Minted: {itemsRedeemed} / {itemsAvailable}</p>}
 
@@ -216,7 +216,7 @@ const Home = (props: HomeProps) => {
               )
             ) : (
               <Countdown
-                date={1637460000000}  // JS timestampes are in milliseconds, must have 3 zeros added
+                date={1637716200000}  // JS timestampes are in milliseconds, must have 3 zeros added
                 onMount={({ completed }) => completed && setIsActive(true)}
                 onComplete={() => setIsActive(true)}
                 renderer={renderCounter}
@@ -226,7 +226,7 @@ const Home = (props: HomeProps) => {
         )}
       </MintContainer>
 
-        */ }
+        
 
       <Snackbar
         open={alertState.open}
