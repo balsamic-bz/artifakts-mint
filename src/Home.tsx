@@ -183,9 +183,8 @@ const Home = (props: HomeProps) => {
         />
       </video>
 
-      { <p> Coming Soon! </p> }
+      { /*<p> Coming Soon! </p> */}
 
-      { /*
 
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
@@ -226,7 +225,7 @@ const Home = (props: HomeProps) => {
         )}
       </MintContainer>
 
-            */ }     
+                 
         
 
       <Snackbar
