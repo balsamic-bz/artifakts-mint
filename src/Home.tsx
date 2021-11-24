@@ -183,9 +183,9 @@ const Home = (props: HomeProps) => {
         />
       </video>
 
-      { <p> Coming Soon! </p> }
+      { /*<p> Coming Soon! </p> */}
 
-      { /*
+      
 
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
@@ -216,7 +216,7 @@ const Home = (props: HomeProps) => {
               )
             ) : (
               <Countdown
-                date={1637717100000}  // JS timestampes are in milliseconds, must have 3 zeros added
+                date={1638291600000}  // JS timestampes are in milliseconds, must have 3 zeros added
                 onMount={({ completed }) => completed && setIsActive(true)}
                 onComplete={() => setIsActive(true)}
                 renderer={renderCounter}
@@ -226,7 +226,7 @@ const Home = (props: HomeProps) => {
         )}
       </MintContainer>
 
-            */}
+            
         
 
       <Snackbar
