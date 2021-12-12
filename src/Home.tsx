@@ -185,6 +185,7 @@ const Home = (props: HomeProps) => {
 
       { /* <p> Coming Soon! </p> */ }
 
+      {  <p style={{color:"red"}}> Phase 1 Mint:  250 Supply </p>  }
       
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
