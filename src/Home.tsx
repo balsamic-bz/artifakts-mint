@@ -187,6 +187,9 @@ const Home = (props: HomeProps) => {
 
       {  <p style={{color:"red"}}> Phase 1 Mint:  250 Supply </p>  }
       
+      {  <p style={{color:"red"}}> SOLD OUT! </p>  }
+
+      { /* 
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
@@ -225,6 +228,8 @@ const Home = (props: HomeProps) => {
           </MintButton>
         )}
       </MintContainer>
+
+      */}
 
                      
         
